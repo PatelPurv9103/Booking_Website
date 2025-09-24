@@ -1,0 +1,948 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image for all pages */
+body {
+  background: url('beach.jpg') no-repeat center center fixed;
+  background-size: cover ; 
+}
+
+nav{
+  padding: 100px;
+}
+
+/* Navbar */
+.navbar {
+  height: min-content;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: centered;
+  margin: auto;
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #023e8a;
+  background-color: #0077b6;
+  color: #fff;
+}
+
+/* Hero Section (home page) */
+.hero {
+  height: 80vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.welcome {
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background-color: #fff;
+  color: #0077b6;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.hero-btn:hover {
+  background-color: #023e8a;
+  color: #fff;
+}
+
+/* Page Content */
+.page-content {
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 15px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid ;
+  background-color: #0076b608;
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  color: #fff;
+}
+
+form button {
+  padding: 12px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #023e8a;
+}
+
+/* Book Now Button in Navbar */
+.book-btn {
+  background-color: #fff;
+  color: #0077b6 !important;
+  border-radius: 4px;
+}
+
+.book-btn:hover {
+  background-color: #023e8a !important;
+  color: #fff !important;
+}
+
+.about-section {
+  padding: 80px 20px; /* dark overlay for contrast */
+  color: #fff;
+  text-align: center;
+
+}
+.about-container {
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+/* Contact Section */
+.contact-section {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+
+}
+
+/* Dark overlay (like About section) */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   /* Darkness level */
+  z-index: 0;
+}
+
+/* Container centered and above overlay */
+.contact-container {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin: 0 auto; /* centers the form */
+  background: rgba(255, 255, 255, 0.1); /* optional glass effect */
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+/* Headline */
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form fields */
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+  color: #ccc;
+}
+
+/* Button */
+.contact-container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
+}
+.footer {
+  background: rgba(0, 0, 0, 0.8); /* dark like About section */
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-about h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.footer-about p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-contact p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.ads-section {
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.ads-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ads-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ad-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.ad-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ad-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.ad-content {
+  padding: 20px;
+}
+
+.ad-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.ad-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+}
+
+.ad-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.ad-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+  .ads-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-card {
+    width: 90%;
+  }
+}
+
+/* Navbar quick style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar h1.logo {
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background: #007bff;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Hero Section */
+.explore-hero {
+  position: relative;
+  background: url('https://source.unsplash.com/1600x600/?travel,beach') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  margin:auto;
+  width: 800px;
+  height: auto;
+  border-radius: 15px;
+
+}
+
+.explore-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.explore-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.explore-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.explore-hero p {
+  font-size: 1.2rem;
+}
+
+/* Cards Section */
+.explore-cards {
+  margin: auto;
+  max-width: 1200px;
+  backdrop-filter: blur(10px);
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.explore-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+}
+
+.explore-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.explore-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.explore-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.explore-content {
+  padding: 20px;
+}
+
+.explore-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.explore-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #0056b3;
+}
+
+/* Navbar active link */
+.navbar ul li a.active {
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.offers{
+  margin:auto;
+  width:800px;
+  height:auto;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Hero Section */
+.offers-hero {
+  position: relative;
+  background: url('https://source.unsplash.com/1600x600/?travel,offer') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  
+}
+
+.offers-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.offers-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.offers-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.offers-hero p {
+  font-size: 1.2rem;
+}
+/* Offers Section */
+.offers-section {
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.offers-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+}
+
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Offer Card */
+.offer-card {
+  
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-content {
+  padding: 20px;
+}
+
+.offer-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.offer-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+}
+
+.discount {
+  display: inline-block;
+  background: #ff4c4c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.offer-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.offer-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .offers-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-card {
+    width: 90%;
+  }
+}
+/* ==== UNIVERSAL RESPONSIVE STYLES ==== */
+
+/* Tablets (up to 992px) */
+@media (max-width: 992px) {
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  /* Hero sections */
+  .hero h2,
+  .explore-hero h2,
+  .offers-hero h2 {
+    font-size: 2rem;
+  }
+
+  /* Cards become 2 per row */
+  .feature,
+  .ad-card,
+  .explore-card,
+  .offer-card {
+    width: 45%;
+  }
+
+  /* Containers */
+  .about-container,
+  .contact-container,
+  .offers,
+  .explore-hero,
+  .offers-hero {
+    width: 90%;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  /* Navbar stack */
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Hero font size */
+  .hero h2,
+  .explore-hero h2,
+  .offers-hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p,
+  .explore-hero p,
+  .offers-hero p {
+    font-size: 1rem;
+  }
+
+  /* Cards full width */
+  .feature,
+  .ad-card,
+  .explore-card,
+  .offer-card {
+    width: 90%;
+  }
+
+  /* Footer stack */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Phones (up to 480px) */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  .hero h2,
+  .explore-hero h2,
+  .offers-hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p,
+  .explore-hero p,
+  .offers-hero p {
+    font-size: 0.9rem;
+  }
+
+  .ad-content p,
+  .explore-content p,
+  .offer-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact-container {
+    padding: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+/* === Force Logo + Navbar Horizontal on All Devices === */
+.navbar {
+  display: flex !important;
+  flex-direction: row !important;   /* always row */
+  justify-content: space-between;   /* logo left, links right */
+  align-items: center;
+  flex-wrap: wrap;                  /* wrap if screen too small */
+  padding: 10px 15px;
+}
+
+/* Adjust logo */
+.navbar .logo {
+  font-size: 22px;    /* smaller on small screens */
+  color: #fff;
+  margin-right: 10px;
+  flex-shrink: 0;     /* logo never shrinks */
+}
+
+/* Keep nav links horizontal */
+.navbar ul,
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;  /* wrap to new line if needed */
+}
+
+/* Make sure each link is auto width */
+.navbar ul li,
+.nav-links li {
+  width: auto !important;
+}
+
+/* On very small screens, shrink text size & padding */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 18px;
+  }
+  .navbar ul li a,
+  .nav-links li a {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+}
+.about-section::before {
+  z-index: 0;
+}
+.about-container {
+  position: relative;
+  z-index: 1;
+}
